@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Counter</title>
+    <style>
+        .counter {
+            background-color: #072A39;
+            color: beige;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            border-radius: 15px;
+            font-size:20px;
+            size:20px;
+        }
+
+        button {
+            background-color: #072A39;
+            color: white;
+            border: none;
+            padding: 15px 15px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #7EC0DEFF;
+        }
+    </style>
+</head>
+<body>
+
+<div class="counter">
+    Assignment Done
+    <br><br>
+    <button onclick="decrement()">↓</button> 
+    <span id="count">0</span> 
+    <button onclick="increment()">↑</button><br><br>
+    
+     <button onclick="reset()">Reset</button> 
+</div>
+
+<script type='text/javascript'>
+let count = 0;
+
+function increment() {
+   document.getElementById('count').innerText = ++count;  
+}
+
+function decrement() {
+   if(count > 0) document.getElementById('count').innerText = --count;  
+}
+
+function reset() {
+   count = 0
+   document.getElementById('count').innerText = count;  
+}
+</script>
+
+</body>
+</html>
